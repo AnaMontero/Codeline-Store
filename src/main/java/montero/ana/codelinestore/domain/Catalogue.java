@@ -1,7 +1,10 @@
 package montero.ana.codelinestore.domain;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 
+@Component
 public class Catalogue {
     private ArrayList<Product> products = new ArrayList<>();
 
