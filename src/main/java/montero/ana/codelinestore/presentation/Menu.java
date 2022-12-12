@@ -1,16 +1,17 @@
 package montero.ana.codelinestore.presentation;
 
-import montero.ana.codelinestore.presentation.dataImport.DataImport;
+import montero.ana.codelinestore.application.ProductService;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Menu {
     final OutputFormatter outputFormatter;
-    final DataImport dataImport;
 
-    public Menu(OutputFormatter outputFormatter, DataImport dataImport){
+    final ProductService productService;
+
+    public Menu(OutputFormatter outputFormatter, ProductService productService){
         this.outputFormatter = outputFormatter;
-        this.dataImport = dataImport;
+        this.productService = productService;
     }
 
     public void start() {
@@ -19,7 +20,7 @@ public class Menu {
         System.out.println("** 🏪 WELCOME TO CODELINE STORE 🏪 **");
         System.out.println("***********************************");
 
-        var catalogue = dataImport.loadCatalog();
+        var catalogue = productService.loadCatalog();
 
         outputFormatter.browseCatalogue(catalogue);
     }

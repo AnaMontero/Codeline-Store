@@ -11,10 +11,16 @@ public class OutputFormatter {
         var products = catalogue.getCatalogue();
         for (Product product:products) {
             System.out.println(product.getImage());
-            System.out.println(product.getSummary());
+            System.out.println(getProductSummary(product));
             System.out.println(product.getCompleteDescription());
             System.out.println("💰 Price: " + product.getPrice() + " " + product.getSymbol());
             System.out.println("Reference: " + product.getReference() + "\n");
         }
+    }
+
+    private String getProductSummary(Product product) {
+        String summary = product.getShortDescription() + ", " +
+                         product.getHighlightedAttribute();
+        return summary;
     }
 }
