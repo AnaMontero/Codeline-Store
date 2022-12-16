@@ -25,4 +25,15 @@ public class Product {
     private BigDecimal price;
     private String symbol;
 
+    public Product(String name, String image, String shortDescription, String highlightedAttribute,
+                   String completeDescription, String reference, BigDecimal price, String symbol) {
+        this.name = name;
+        this.image = image;
+        this.shortDescription = shortDescription;
+        this.highlightedAttribute = highlightedAttribute;
+        this.completeDescription = completeDescription;
+        this.reference = reference;
+        this.price = price;
+        this.symbol = symbol;
+    }
 }
