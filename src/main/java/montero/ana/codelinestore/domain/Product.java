@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-//Reference for currency: https://www.javatpoint.com/post/java-currency-getsymbol-method
 @Entity
 @NoArgsConstructor
 @Getter
