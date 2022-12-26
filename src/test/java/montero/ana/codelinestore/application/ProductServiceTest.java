@@ -12,9 +12,9 @@ class ProductServiceTest {
     @Test
     @DisplayName("Should return catalogue")
     void test_LoadCatalogue_Ok() {
-        ProductService mockedProductService = mock(ProductService.class);
+        var mockedProductService = mock(ProductService.class);
 
-        Catalogue mockedCatalogue = mock(Catalogue.class);
+        var mockedCatalogue = mock(Catalogue.class);
         when(mockedProductService.loadCatalog()).thenReturn(mockedCatalogue);
     }
 }
