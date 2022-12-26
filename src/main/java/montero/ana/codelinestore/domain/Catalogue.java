@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 @Component
 public class Catalogue {
-    private ArrayList<Product> products = new ArrayList<>();
+    private final ArrayList<Product> products = new ArrayList<>();
 
     public Catalogue() {
     }
@@ -21,9 +21,5 @@ public class Catalogue {
 
     public int size() {
         return products.size();
-    }
-
-    public boolean contains(Object o) {
-        return products.indexOf(o) >= 0;
     }
 }

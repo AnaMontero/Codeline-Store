@@ -22,7 +22,7 @@ class CatalogueTest {
         product1 = new Product("TestTV", "📺", "Test television",
                 "Test 13", "With this test panoramic television, your friday nights will be boring no more.",
                 "TestW2C", new BigDecimal("0.99"), Currency.getInstance("USD").getSymbol());
-        Product product2 = new Product("TestPiano", "🎹", "Test musical keyboard", "Test 4 octaves", "Tired of your " +
+        var product2 = new Product("TestPiano", "🎹", "Test musical keyboard", "Test 4 octaves", "Tired of your " +
                 "noisy neighbourgh? Play this test untuned musical keyboard for " + "two hours at home and your " +
                 "neighbour will be ready to move to a building far away from you.", "TestX4A", new BigDecimal("1.00")
                 , Currency.getInstance("MXN").getSymbol());
@@ -48,7 +48,7 @@ class CatalogueTest {
     @Test
     @DisplayName("Should add to catalogue")
     void test_AddToCatalogue_Ok() {
-        Product product3 = new Product();
+        var product3 = new Product();
         var previousCatalogueSize = catalogue.size();
 
         catalogue.addToCatalogue(product3);
@@ -59,8 +59,8 @@ class CatalogueTest {
     @Test
     @DisplayName("Should invoke addToCatalogue method once")
     void test_AddToCatalogueOnce_Ok() {
-        Product mockedProduct = mock(Product.class);
-        Catalogue mockedCatalogue = mock(Catalogue.class);
+        var mockedProduct = mock(Product.class);
+        var mockedCatalogue = mock(Catalogue.class);
         mockedCatalogue.addToCatalogue(mockedProduct);
         verify(mockedCatalogue, times(1)).addToCatalogue(mockedProduct);
     }

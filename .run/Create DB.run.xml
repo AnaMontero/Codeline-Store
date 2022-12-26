@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Create DB" type="DatabaseScript">
+    <data-source id="a1b9df22-38ba-4b12-92ff-c7b7ca0c33bd" />
+    <script-text>CREATE DATABASE IF NOT EXISTS codeline_store;
+CREATE DATABASE IF NOT EXISTS codeline_store_test;</script-text>
+    <method v="2" />
+  </configuration>
+</component>
