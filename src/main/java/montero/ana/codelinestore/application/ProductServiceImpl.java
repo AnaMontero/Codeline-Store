@@ -25,4 +25,10 @@ public class ProductServiceImpl implements ProductService {
             }
         return catalogue;
     }
+
+    @Override
+    public int getProductStock(String productReference) {
+        List<Product> products = productRepository.findProductByReference(productReference);
+        return products.size();
+    }
 }
